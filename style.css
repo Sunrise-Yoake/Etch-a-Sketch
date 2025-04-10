@@ -24,15 +24,37 @@ body {
 }
 
 #changeGrid {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96c93d);
+    background-size: 400% 400%;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    animation: gradientFlow 8s ease infinite;
+}
+#changeGrid:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
-#changeGrid:hover {
-    background-color: #45a049;
+#changeGrid:active {
+    transform: translateY(0);
+    filter: brightness(0.9);
+}
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
